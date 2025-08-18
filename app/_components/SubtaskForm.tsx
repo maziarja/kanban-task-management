@@ -20,20 +20,20 @@ function SubtaskForm({ subtask }: SubtaskFormProps) {
 
   return (
     <div
-      onClick={handleChange}
-      className="bg-light-grey dark:bg-very-dark-grey hover:bg-purple-hover/20 active:bg-purple-hover/20 flex cursor-pointer items-center gap-4 rounded-lg p-3"
+      className="bg-light-grey dark:bg-very-dark-grey hover:bg-purple-hover/20 active:bg-purple-hover/20 flex items-center gap-4 rounded-lg p-3"
       key={subtask._id}
     >
       <input
         type="checkbox"
         id={`title-${subtask._id}`}
         name="title"
+        className="cursor-pointer"
         checked={isSubtaskCompleted}
-        // onChange={handleChange}
+        onChange={handleChange}
       />
       <label
         htmlFor={`title-${subtask._id}`}
-        className={`body-m cursor-pointer ${isSubtaskCompleted ? "text-medium-grey" : "text-black dark:text-white"} ${isSubtaskCompleted && "line-through"} `}
+        className={`body-m w-full cursor-pointer ${isSubtaskCompleted ? "text-medium-grey" : "text-black dark:text-white"} ${isSubtaskCompleted && "line-through"} `}
       >
         {subtask.title}
       </label>

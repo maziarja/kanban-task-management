@@ -27,13 +27,13 @@ export default async function RootLayout({
       >
         <ThemeProvider
           attribute="data-mode"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <ModalProvider>
-            {taskModal}
             {children}
+            {taskModal}
           </ModalProvider>
         </ThemeProvider>
       </body>
