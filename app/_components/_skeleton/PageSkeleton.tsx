@@ -9,18 +9,24 @@ export default function PageSkeleton() {
   return (
     <div className="dark:bg-very-dark-grey fixed inset-0 min-h-screen bg-gray-50 p-6">
       {/* Header */}
-      <div className="justify-between00 mb-8 flex items-center">
+      <div className="mb-8 flex items-center justify-between">
         <Skeleton
           height={32}
           width={200}
           borderRadius={8}
           className="animate-pulse"
+          baseColor={theme === "dark" ? "#3e3f4e" : ""}
+          highlightColor={theme === "dark" ? "#3e3f4e" : ""}
+          customHighlightBackground={theme === "dark" ? "#828fa3" : ""}
         />
         <Skeleton
           height={40}
           width={120}
           borderRadius={8}
           className="animate-pulse"
+          baseColor={theme === "dark" ? "#3e3f4e" : ""}
+          highlightColor={theme === "dark" ? "#3e3f4e" : ""}
+          customHighlightBackground={theme === "dark" ? "#828fa3" : ""}
         />
       </div>
 
