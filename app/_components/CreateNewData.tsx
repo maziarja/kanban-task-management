@@ -2,8 +2,8 @@
 
 import { useEffect, useTransition } from "react";
 import { createUserIdCookie } from "../_actions/initialDataActions/createUserIdCookie";
-// import Loader from "./Loader";
-import InitialData from "./InitialData";
+import Loader from "./Loader";
+// import InitialData from "./InitialData";
 
 function CreateNewData() {
   // Setting cookies must be in client
@@ -18,8 +18,8 @@ function CreateNewData() {
       await createCookie();
     });
   }, []);
-  // return <>{isPending ? <Loader isInitData={true} /> : null}</>;
-  return <>{isPending ? <InitialData /> : null}</>;
+  return <>{isPending ? <Loader isInitData={true} /> : null}</>;
+  // return <>{isPending ? <InitialData /> : null}</>;
 }
 
 export default CreateNewData;
