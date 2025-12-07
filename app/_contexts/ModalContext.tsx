@@ -1,4 +1,4 @@
-"use client";
+g"use client";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 type ModalProviderProps = {
